@@ -23,8 +23,6 @@ public class MainActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerShape.setAdapter(adapter);
 
-
-
         pilihan.setOnClickListener(view ->{
             String selection = spinnerShape.getSelectedItem().toString();
             if (selection.equals("Kubus")){
@@ -37,6 +35,16 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(this,KerucutPage.class);
                 startActivity(intent);
                 finish();
+            }
+
+            else if (selection.equals("Tabung")){
+                Intent intent = new Intent(this,KerucutPage.class);
+                startActivity(intent);
+                finish();
+            }
+
+            else{
+                Toast.makeText(getApplication(), "Mohon Pilih Salah Satu Bentuk" , Toast.LENGTH_LONG).show();
             }
         });
     }

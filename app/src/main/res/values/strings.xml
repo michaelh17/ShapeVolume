@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Aplikasi Penghitung Bentuk</string>
     <string-array name="Shape">
+        <item>---</item>
         <item>Kubus</item>
         <item>Kerucut</item>
         <item>Tabung</item>
