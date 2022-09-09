@@ -14,7 +14,7 @@
         android:theme="@style/Theme.AplikasiPenghitungBentuk"
         tools:targetApi="31">
         <activity
-            android:name=".SegitigaPage"
+            android:name=".KerucutPage"
             android:exported="false" />
         <activity
             android:name=".KubusPage"

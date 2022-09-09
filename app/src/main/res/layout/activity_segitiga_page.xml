@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SegitigaPage">
+    tools:context=".KerucutPage">
 
     <TextView
         android:id="@+id/textView4"
@@ -63,7 +63,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:srcCompat="@drawable/segitiga" />
+        app:srcCompat="@drawable/kerucut" />
 
     <Button
         android:id="@+id/processButton"

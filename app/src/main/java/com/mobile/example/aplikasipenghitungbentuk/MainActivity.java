@@ -32,8 +32,10 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
 
-            else{
-
+            else if (selection.equals("Kerucut")){
+                Intent intent = new Intent(this,KerucutPage.class);
+                startActivity(intent);
+                finish();
             }
         });
     }

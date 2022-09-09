@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class SegitigaPage extends AppCompatActivity {
+public class KerucutPage extends AppCompatActivity {
     EditText  jarijari,tinggi,result;
     Button  processButton,resetButton, backButton;
 
@@ -42,9 +42,9 @@ public class SegitigaPage extends AppCompatActivity {
             else{
                 String jarijari1 = jarijari.getText().toString();
                 String tinggi1 = tinggi.getText().toString();
-                Integer alasSegitiga = Integer.parseInt(jarijari);
-                Integer tinggiSegitiga = Integer.parseInt(tinggi1);
-                float hasil = VolumeKerucut(alasSegitiga,tinggiSegitiga);
+                Integer jariKerucut = Integer.parseInt(jarijari1);
+                Integer tinggiKerucut = Integer.parseInt(tinggi1);
+                double hasil = VolumeKerucut(jariKerucut,tinggiKerucut);
                 result.setText(String.valueOf(hasil));
             }
         });
@@ -63,10 +63,7 @@ public class SegitigaPage extends AppCompatActivity {
         });
 
     }
-    private float VolumeKerucut(Integer r , Integer t){
-        return 1/3 * 3.14 * r * r * t ;
-
-
+    private double VolumeKerucut(Integer r , Integer t){
+        return (1/3) * 3.14 * r * r * t ;
     }
     }
-}
