@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class SegitigaPage extends AppCompatActivity {
-    EditText  alas,tinggi,result;
+    EditText  jarijari,tinggi,result;
     Button  processButton,resetButton, backButton;
 
     @Override
@@ -16,7 +16,7 @@ public class SegitigaPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_segitiga_page);
 
-        alas = findViewById(R.id.alas);
+        jarijari = findViewById(R.id.jarijari);
         tinggi = findViewById(R.id.tinggi);
         processButton = findViewById(R.id.processButton);
         result = findViewById(R.id.result);
@@ -27,12 +27,12 @@ public class SegitigaPage extends AppCompatActivity {
 
 
         processButton.setOnClickListener(view-> {
-            if (alas.length() == 0 && tinggi.length() == 0){
-                Toast.makeText(getApplication(), "Alas & Tinggi Belum Diisi!!" , Toast.LENGTH_LONG).show();
+            if (jarijari.length() == 0 && tinggi.length() == 0){
+                Toast.makeText(getApplication(), "Jari Jari & Tinggi Belum Diisi!!" , Toast.LENGTH_LONG).show();
             }
 
-            if (alas.length() == 0){
-                Toast.makeText(getApplication(), "Alas Belum Diisi!!" , Toast.LENGTH_LONG).show();
+            if (jarijari.length() == 0){
+                Toast.makeText(getApplication(), "Jari Jari Belum Diisi!!" , Toast.LENGTH_LONG).show();
             }
 
             if (tinggi.length() == 0){
@@ -40,18 +40,18 @@ public class SegitigaPage extends AppCompatActivity {
             }
 
             else{
-                String alas1 = alas.getText().toString();
+                String jarijari1 = jarijari.getText().toString();
                 String tinggi1 = tinggi.getText().toString();
-                Integer alasSegitiga = Integer.parseInt(alas1);
+                Integer alasSegitiga = Integer.parseInt(jarijari);
                 Integer tinggiSegitiga = Integer.parseInt(tinggi1);
-                Integer hasil = VolumeSegitiga(alasSegitiga,tinggiSegitiga);
+                float hasil = VolumeKerucut(alasSegitiga,tinggiSegitiga);
                 result.setText(String.valueOf(hasil));
             }
         });
 
 
         resetButton.setOnClickListener(view-> {
-            alas.getText().clear();
+            jarijari.getText().clear();
             tinggi.getText().clear();
             result.getText().clear();
         });
@@ -63,8 +63,8 @@ public class SegitigaPage extends AppCompatActivity {
         });
 
     }
-    private Integer VolumeSegitiga(Integer a , Integer t){
-        return 1/2 * a * t;
+    private float VolumeKerucut(Integer r , Integer t){
+        return 1/3 * 3.14 * r * r * t ;
 
 
     }
