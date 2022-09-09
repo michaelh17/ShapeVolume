@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Aplikasi Penghitung Bentuk</string>
+    <string-array name="spinner">
+        <item>Kubus</item>
+        <item>Segitiga</item>
+        <item>Bulat</item>
+    </string-array>
+</resources>
