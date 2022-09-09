@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     Button pilihan;
@@ -15,21 +16,21 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Spinner spinnerLanguages=findViewById(R.id.spinner);
-
-        ArrayAdapter<CharSequence>adapter=ArrayAdapter.createFromResource(this, R.array.spinner , android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
-        spinnerLanguages.setAdapter(adapter);
-
-        String selection = spinnerLanguages.getSelectedItem().toString();
         pilihan = findViewById(R.id.pilihan);
-        pilihan.setOnClickListener(view ->{
+        Spinner spinnerShape=findViewById(R.id.spinner);
 
+        ArrayAdapter<CharSequence>adapter=ArrayAdapter.createFromResource(this, R.array.Shape , android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerShape.setAdapter(adapter);
+
+
+
+        pilihan.setOnClickListener(view ->{
+            String selection = spinnerShape.getSelectedItem().toString();
             if (selection.equals("Kubus")){
-                Intent intent = new Intent(this,KubusPage.class);
-                startActivity(intent);
-                finish();
+               Intent intent = new Intent(this,KubusPage.class);
+               startActivity(intent);
+               finish();
             }
 
             else if (selection.equals("Kerucut")){

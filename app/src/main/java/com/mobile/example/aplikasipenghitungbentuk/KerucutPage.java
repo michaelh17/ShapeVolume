@@ -42,9 +42,9 @@ public class KerucutPage extends AppCompatActivity {
             else{
                 String jarijari1 = jarijari.getText().toString();
                 String tinggi1 = tinggi.getText().toString();
-                Integer jariKerucut = Integer.parseInt(jarijari1);
-                Integer tinggiKerucut = Integer.parseInt(tinggi1);
-                double hasil = VolumeKerucut(jariKerucut,tinggiKerucut);
+                Double jariKerucut = Double.parseDouble(jarijari1);
+                Double tinggiKerucut = Double.parseDouble(tinggi1);
+                Double hasil = VolumeKerucut(jariKerucut,tinggiKerucut);
                 result.setText(String.valueOf(hasil));
             }
         });
@@ -63,7 +63,7 @@ public class KerucutPage extends AppCompatActivity {
         });
 
     }
-    private double VolumeKerucut(Integer r , Integer t){
-        return (1/3) * 3.14 * r * r * t ;
+    private Double VolumeKerucut(Double r , Double t){
+        return 0.333 * 3.14 * r * r * t;
     }
     }
